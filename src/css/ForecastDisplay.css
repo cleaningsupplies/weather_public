@@ -1,0 +1,47 @@
+.container{
+    width: 85%;
+}
+
+.forecastScroll{
+    overflow: auto;
+    white-space: nowrap;
+    font-size: 2.3vh;
+    scrollbar-color: #EC6E4D #1c151d;
+    
+}
+
+.forecastScroll div {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.forecastDay{
+    align-items: center;
+    justify-content: center;
+}
+
+.forecast_temp{
+    font-weight: bold;
+    font-size: 3vh;
+    margin-bottom: 5%;
+}
+
+::-webkit-scrollbar {
+    height: 8px;  
+    width: 100%;
+    border-radius: 10px;
+    background-color: #1c151d;             
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #EC6E4D; 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9D361F; 
+  }
+
+

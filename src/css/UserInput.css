@@ -1,0 +1,35 @@
+.form{
+    border-bottom: 1px solid #48484A;
+}
+
+.inputText {
+
+    border: 0;
+    outline: 0;
+    color: #EC6E4D;
+    font-size: 3vh;
+    background: transparent;
+    transition: color 0.2s;
+    font-family: 'Baloo 2', cursive;
+}
+
+::placeholder{
+    color: #48484A;
+}
+
+.submit{
+    background-image: url("../img/search.png");
+    background-position: center;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+}
+
+.submit:hover{
+    background-image: url("../img/search_hover.png");
+}
