@@ -4,10 +4,11 @@ import ForecastDisplay from './ForecastDisplay';
 import UserInput from './UserInput';
 import WeatherDisplay from './WeatherDisplay';
 import "../css/WeatherApp.css";
+import {api_key} from "../config.js";
 
 export default function WeatherApp() {
 
-    const WEATHER_API_KEY = "f54f59daf2979196d269340006700937";
+    const WEATHER_API_KEY = api_key;
 
     const weather = {
         city: "",
