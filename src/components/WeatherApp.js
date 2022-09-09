@@ -28,13 +28,17 @@ export default function WeatherApp() {
 
     const [weatherData, setWeatherData] = useState({});  
     const [forecastData, setForecastData] = useState(forecast);
-
+      
     //getting current location data on page load 
     useEffect(() => {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
+            navigator.geolocation.getCurrentPosition(showPosition, function(error) {
+                if (error.code === error.PERMISSION_DENIED){
+                  alert("Please allow access to location in order to use webapp, thanks!");
+                }
+              });
         } else {
-            console.log("Geolocation is not supported by this browser.");
+            alert("Geolocation is not supported by your browser.");
         }
 
         function showPosition(position) {
@@ -62,7 +66,6 @@ export default function WeatherApp() {
         const getJSON = async url => {
             const response = await fetch(url);
             return response.json(); 
-
         }
     
         getJSON(url)
@@ -124,6 +127,8 @@ export default function WeatherApp() {
         const yyyy = today.getFullYear();
         return `${yyyy}-${mm}-${dd}` === day;
     }
+
+
 
     return (
         <div className='weatherApp'>

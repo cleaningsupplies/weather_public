@@ -6,6 +6,7 @@ export default function UserInput({showWeather}) {
     function handleSubmit(event){
         const city = document.querySelector(".inputText").value;
         showWeather(city);
+        document.querySelector(".form").reset();
         event.preventDefault();
     }
 
