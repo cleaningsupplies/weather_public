@@ -34,11 +34,11 @@ export default function WeatherApp() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition, function(error) {
                 if (error.code === error.PERMISSION_DENIED){
-                  alert("Please allow access to location in order to use webapp, thanks!");
+                  alert("Please allow your browser to access your location first. You can do that in your settings. Thank you! 🌎");
                 }
               });
         } else {
-            alert("Geolocation is not supported by your browser.");
+            alert("Geolocation is not supported by your browser. Try it on another browser. 🌎");
         }
 
         function showPosition(position) {
